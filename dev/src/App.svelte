@@ -6,9 +6,32 @@
 </script>
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    body {
+        font-size: 1rem;
+    }
+    @keyframes hue_rotate {
+        0% {
+            filter: hue-rotate(0deg);
+            border: transparent 4px solid;
+            margin: 2rem;
+            padding: 3.33rem;
+        }
+        50% {
+            filter: hue-rotate(180deg);
+            border: rgb(255, 255, 255) 4px solid;
+            margin: 3.33rem;
+            padding: 2rem;
+        }
+        100% {
+            filter: hue-rotate(360deg);
+            border: transparent 4px solid;
+            margin: 2rem;
+            padding: 3.33rem;
+        }
+    }
     div {
         text-align: center;
-        width: 60%;
+        width: 66%;
         margin: auto;
         &.wrapper {
             width: 100vw;
@@ -19,18 +42,43 @@
             font-weight: 700;
             margin-bottom: 1rem;
         }
+        &.row {
+            display: flex;
+            flex-direction: row;
+        }
+        &.column {
+            display: flex;
+            flex-direction: column;
+        }
         &.blurb {
             font-size: 1.2rem;
             font-weight: 400;
             margin-bottom: 1rem;
             line-height: 1.5rem;
         }
+        &.centerify {
+            width: fit-content;
+            margin: auto;
+        }
         &.img {
-            margin-bottom: 1rem;
+            margin: auto;
+            &:has(.logo) {
+                margin: 2rem;
+                padding: 3.33rem;
+                border: transparent 4px solid;
+                border-radius: 100%;
+                width: fit-content;
+                &:hover {
+                    animation: hue_rotate 3s infinite;
+                }
+            }
             img {
                 width: 30rem;
                 &.logo {
-                    width: 10rem;
+                    width: 12rem;
+                }
+                &.icon {
+                    width: 8rem;
                 }
             }
         }
@@ -39,7 +87,7 @@
     a {
         color: white;
         text-decoration: underline;
-        transition: 0.2s;
+        transition: 0.33s;
         padding: 0.5rem;
         border-radius: 1rem;
         &.highlight:hover {
@@ -50,14 +98,14 @@
             transition: 0.66s;
             border: transparent 4px solid;
             border-radius: 100%;
-            padding: 2rem;
+            padding: 1.33rem;
             margin: 0rem;
             &:hover {
                 filter: saturate(150%) hue-rotate(360deg) brightness(1.2);
                 border: rgb(255, 255, 255) 4px solid;
                 border-radius: 100%;
                 padding: 0rem;
-                margin: 2rem;
+                margin: 1.33rem;
             }
         }
     }
@@ -67,7 +115,7 @@
         width: 100vw;
         background-color: rgb(1, 9, 11);
         position: relative;
-        margin: 4rem auto 4rem auto;
+        margin: 3rem auto 3rem auto;
         
         &:before,
         &:after {
@@ -85,13 +133,13 @@
 
         &:before {
             top: 0;
-            transform: skewY(4deg);
+            transform: skewY(3deg);
             transform-origin: 100% 0;
         }
         
         &:after {
             bottom: 0;
-            transform: skewY(-4deg);
+            transform: skewY(-3deg);
             transform-origin: 100%;
         }
     }
@@ -117,9 +165,11 @@
     }
 </style>
 <body>
-    <section>
-        <div class='img'>
-            <img src="src/assets/Quill Icon.png" alt="Lexicanter logo" class="logo">
+    <section style="margin: -2rem 0 3rem 0;">
+        <div class="centerify" style="margin-bottom: -3rem">
+            <div class='img'>
+                <img src="src/assets/Quill Icon.png" alt="Lexicanter logo" class="logo">
+            </div>
         </div>
     </section>
 
@@ -132,7 +182,7 @@
     <div class="wrapper" style='height: 8rem'>
         <FadeIn>
             <div class='blurb'>
-                <i>Lexicanter</i> is app for constructing languages.
+                <i>Lexicanter</i> is an app for constructing languages.
                 It was developed and will occasionally be updated by Ethan Ray (known online as Saturnine or Cthethan).<br/>
                 It was created in January 2022, and last updated February 2023.
             </div>
@@ -164,23 +214,41 @@
     </div>
 
     <section>
-        <div class="wrapper" style="height: 18rem">
+        <div class="wrapper" style="height: 16rem">
             <FadeIn>
-                <div class='img'>
-                    <a href="https://www.patreon.com/saturnine_softworks" target="_blank" rel="noreferrer">
-                        <img src="src/assets/patreon.png" alt="Patreon icon" class="logo" />
-                    </a>
-                    <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer">
-                        <img src="src/assets/discord.png" alt="Discord icon" class="logo" />
-                    </a>
+                <div class='img row'>
+                    <div class="column">
+                        <a href="https://www.patreon.com/saturnine_softworks" target="_blank" rel="noreferrer">
+                            <img src="src/assets/patreon.png" alt="Patreon icon" class="icon" />
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://ko-fi.com/saturnine_softworks" target="_blank" rel="noreferrer">
+                            <img src="src/assets/ko-fi.png" alt="Ko-fi icon" class="icon" />
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer">
+                            <img src="src/assets/discord.png" alt="Discord icon" class="icon" />
+                        </a>
+                    </div>
                 </div>
-                <div class="blurb">
-                    <a href="https://www.patreon.com/saturnine_softworks" target="_blank" rel="noreferrer" class="highlight">
-                        Support Lexicanter as a patron!
-                    </a>
-                    <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer" class="highlight">
-                        Join Saturn's Sojourn on Discord!
-                    </a>
+                <div class="blurb row">
+                    <div class="column">
+                        <a href="https://www.patreon.com/saturnine_softworks" target="_blank" rel="noreferrer" class="highlight">
+                            Become a patron!
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://ko-fi.com/saturnine_softworks" target="_blank" rel="noreferrer" class="highlight">
+                            Spot me a coffee!
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer" class="highlight">
+                            Join Saturn's Sojourn!
+                        </a>
+                    </div>
                 </div>
             </FadeIn>
         </div>
