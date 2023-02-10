@@ -6,8 +6,71 @@
 </script>
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    body {
-        font-size: 1rem;
+    @media (max-device-width: 600px) {
+        body {
+            font-size: 0.7rem;
+            line-height: 1.1rem;
+        }
+        div {
+            &.head {
+                font-size: 1.5rem;
+            }
+            &.img {
+                img {
+                    width: 20rem;
+                    &.logo {
+                        width: 6rem;
+                    }
+                    &.icon {
+                        width: 4rem;
+                    }
+                }
+            }
+            &.wrapper {
+                &.small {
+                    height: 7rem;
+                }
+                &.large {
+                    height: 14rem;
+                }
+            }
+        }
+        button {
+            font-size: 1rem;
+        }
+    }
+    @media (min-device-width: 601px) {
+        body {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        div{
+            &.head {
+                font-size: 3rem;
+            }
+            &.img {
+                img {
+                    width: 30rem;
+                    &.logo {
+                        width: 12rem;
+                    }
+                    &.icon {
+                        width: 8rem;
+                    }
+                }
+            }
+            &.wrapper {
+                &.small {
+                    height: 8rem;
+                }
+                &.large {
+                    height: 16rem;
+                }
+            }
+        }
+        button {
+            font-size: 2rem;
+        }
     }
     @keyframes hue_rotate {
         0% {
@@ -37,24 +100,23 @@
             width: 100vw;
         }
         &.head {
-            font-size: 3rem;
             font-style: italic;
             font-weight: 700;
             margin-bottom: 1rem;
         }
         &.row {
+            width: 100vw;
             display: flex;
             flex-direction: row;
+            margin: auto;
         }
         &.column {
             display: flex;
             flex-direction: column;
         }
         &.blurb {
-            font-size: 1.2rem;
             font-weight: 400;
             margin-bottom: 1rem;
-            line-height: 1.5rem;
         }
         &.centerify {
             width: fit-content;
@@ -70,15 +132,6 @@
                 width: fit-content;
                 &:hover {
                     animation: hue_rotate 3s infinite;
-                }
-            }
-            img {
-                width: 30rem;
-                &.logo {
-                    width: 12rem;
-                }
-                &.icon {
-                    width: 8rem;
                 }
             }
         }
@@ -149,7 +202,6 @@
         border-radius: 0.5rem;
         color: rgb(255, 255, 255);
         font-family: 'Raleway', sans-serif;
-        font-size: 2rem;
         font-weight: 700;
         margin: 0.5rem;
         padding: 0.5rem 1rem 0.5rem 1rem;
@@ -179,7 +231,7 @@
         </div>
     </FadeIn>
 
-    <div class="wrapper" style='height: 8rem'>
+    <div class="wrapper small">
         <FadeIn>
             <div class='blurb'>
                 <i>Lexicanter</i> is an app for constructing languages.
@@ -189,7 +241,7 @@
         </FadeIn>
     </div>
 
-    <div class="wrapper" style='height: 8rem'>
+    <div class="wrapper small">
         <FadeIn>
             <div class='blurb'>
                 Version 1.11.1 is available for download for both macOS and Windows.
@@ -214,7 +266,7 @@
     </div>
 
     <section>
-        <div class="wrapper" style="height: 16rem">
+        <div class="wrapper large">
             <FadeIn>
                 <div class='img row'>
                     <div class="column">
@@ -272,16 +324,14 @@
     </div>
 
     <section>
-        <div style='height: 18rem' class='wrapper'>
+        <div class='wrapper large'>
             <FadeIn>
                 <div class='blurb'>
                     I originally started working on this project because I like to keep my language's lexicons formatted nicely,
-                    at all times, yet need to keep them organized. Spreadsheets couldn't cut it for me because of aesthetics: keeping
-                    a spreadsheet pretty adds unjustifiable amounts of time to their maintenance. On the other hand, word processors
-                    lack the functionality for keeping a lexicon organized, and manually maintaining them quickly becomes unfeasible.
-                    So, I developed a tool that allows me to keep my lexicons presentable <i>and</i> organized, with the capability
-                    to export CSV for spreadsheets as well as plain text that can be brought straight into a word processor. Since then,
-                    the feature list of the app has greatly expanded.
+                    at all times, yet need to keep them organized. Spreadsheets couldn't cut it because of aesthetics; on the other hand, 
+                    word processors lack the functionality for keeping a lexicon organized So, I developed a tool that allows me to keep
+                    my lexicons presentable <i>and</i> organized, with the ability to export CSV for spreadsheets as well as plain text
+                    that can be brought straight into a word processor. Since then, the feature list of the app has greatly expanded.
                 </div>
             </FadeIn>
         </div>
