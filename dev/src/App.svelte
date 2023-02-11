@@ -102,7 +102,7 @@
         &.head {
             font-style: italic;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin: 2rem auto 1rem auto;
         }
         &.row {
             width: 100vw;
