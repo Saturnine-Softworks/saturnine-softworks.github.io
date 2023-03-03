@@ -244,7 +244,7 @@
     <div class="wrapper small">
         <FadeIn>
             <div class='blurb'>
-                Version 1.11.1 is available for download for both macOS and Windows.
+                Version {version} is available for download for both macOS and Windows.
             </div>
         </FadeIn>
         <FadeIn>
