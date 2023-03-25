@@ -1,7 +1,7 @@
 <script lang="ts">
     import FadeIn from "./lib/FadeIn.svelte";
     import Carousel from 'svelte-carousel';
-    const version = '1.11.3';
+    const version = '1.11.4';
     const images = ['dark-theme', 'light-theme', 'marine-theme', 'glade-theme', 'pom-theme', 'wist-theme', 'leather-theme'];
 </script>
 <style lang="scss">
@@ -161,6 +161,15 @@
                 margin: 1.33rem;
             }
         }
+        img.beta {
+            transition: 0.66s;
+            border: transparent 4px solid;
+            border-radius: 0%;
+            padding: 1.33rem;
+            &:hover {
+                filter: saturate(150%) hue-rotate(360deg) brightness(1.2);
+            }
+        }
     }
 
     section {
@@ -217,10 +226,10 @@
     }
 </style>
 <body>
-    <section style="margin: -2rem 0 3rem 0;">
-        <div class="centerify" style="margin-bottom: -3rem">
+    <section style="margin: -1rem 0 3rem 0;">
+        <div class="centerify" style="margin-bottom: -5rem">
             <div class='img'>
-                <img src="src/assets/Quill Icon.png" alt="Lexicanter logo" class="logo">
+                <img src="src/assets/alembic.png" alt="Lexicanter logo" class="logo">
             </div>
         </div>
     </section>
@@ -236,7 +245,7 @@
             <div class='blurb'>
                 <i>Lexicanter</i> is an app for constructing languages.
                 It was developed and will occasionally be updated by Ethan Ray (known online as Saturnine or Cthethan).<br/>
-                It was created in January 2022, and last updated February 2023.
+                It was created in January 2022, and last updated March 2023.
             </div>
         </FadeIn>
     </div>
@@ -264,7 +273,16 @@
             </button>
         </FadeIn>
     </div>
-
+    <br>
+    <div class="img">
+        <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer">
+            <img src="src/assets/alembic-beta.png" alt="Beta Alembic" class="icon beta" />
+        </a>
+    </div>
+    <div class='blurb'>
+        Interested in trying in-development features? Join the beta testers on the Discord!
+    </div>
+    <br>
     <section>
         <div class="wrapper large">
             <FadeIn>
