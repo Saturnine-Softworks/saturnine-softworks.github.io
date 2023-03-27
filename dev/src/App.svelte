@@ -1,7 +1,7 @@
 <script lang="ts">
     import FadeIn from "./lib/FadeIn.svelte";
     import Carousel from 'svelte-carousel';
-    const version = '1.11.4';
+    const version = '2.0.8';
     const images = ['dark-theme', 'light-theme', 'marine-theme', 'glade-theme', 'pom-theme', 'wist-theme', 'leather-theme'];
 </script>
 <style lang="scss">
