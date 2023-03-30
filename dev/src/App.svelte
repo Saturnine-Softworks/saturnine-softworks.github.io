@@ -1,7 +1,7 @@
 <script lang="ts">
     import FadeIn from "./lib/FadeIn.svelte";
     import Carousel from 'svelte-carousel';
-    const version = '2.0.9';
+    const version = '2.0.13';
     const images = ['dark-theme', 'light-theme', 'marine-theme', 'glade-theme', 'pom-theme', 'wist-theme', 'leather-theme'];
 </script>
 <style lang="scss">
@@ -253,7 +253,7 @@
     <div class="wrapper small">
         <FadeIn>
             <div class='blurb'>
-                Version {version} is available for download for both macOS and Windows.
+                Version {version} is available for download for both macOS, Windows, and Linux.
             </div>
         </FadeIn>
         <FadeIn>
@@ -269,6 +269,13 @@
                 href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-Setup-{version}.exe"
                 target="_blank" rel="noreferrer">
                     Windows
+                </a>
+            </button>
+            <button>
+                <a 
+                href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-{version}.AppImage"
+                target="_blank" rel="noreferrer">
+                    Linux
                 </a>
             </button>
         </FadeIn>
