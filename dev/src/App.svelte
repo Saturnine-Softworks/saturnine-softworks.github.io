@@ -1,7 +1,7 @@
 <script lang=ts>
     import FadeIn from "./lib/FadeIn.svelte";
     import Carousel from 'svelte-carousel';
-    const version = '2.1.20';
+    const version = '2.2.1';
     const images = ['dark-theme', 'light-theme', 'marine-theme', 'glade-theme', 'pom-theme', 'wist-theme', 'leather-theme'];
 </script>
 <style lang="scss">
@@ -253,31 +253,51 @@
     <div class="wrapper small">
         <FadeIn>
             <div class='blurb'>
-                Version {version} is available for download for both macOS, Windows, and Linux.
+                Version {version} is available for download for all of macOS, Windows, and Linux.
             </div>
         </FadeIn>
         <FadeIn>
-            <button>
-                <a 
-                href='https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-{version}.dmg' 
-                target='_blank' rel='noreferrer'>
-                    macOS
-                </a>
-            </button>
-            <button>
-                <a 
-                href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-Setup-{version}.exe"
-                target="_blank" rel="noreferrer">
-                    Windows
-                </a>
-            </button>
-            <button>
-                <a 
-                href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-{version}.AppImage"
-                target="_blank" rel="noreferrer">
-                    Linux
-                </a>
-            </button>
+            <div style=display:flex>
+                <div style='display: flex; flex-direction: column'>
+                    <button>
+                        <a
+                        href='https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-{version}-arm64.dmg'
+                        target='_blank' rel='noreferrer'>
+                            macOS (Silicon)
+                        </a>
+                    </button>
+                    <button>
+                        <a
+                        href='https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-{version}.dmg'
+                        target='_blank' rel='noreferrer'>
+                            macOS (Intel)
+                        </a>
+                    </button>
+                </div>
+                <button>
+                    <a
+                    href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-Setup-{version}.exe"
+                    target="_blank" rel="noreferrer">
+                        Windows
+                    </a>
+                </button>
+                <div style='display: flex; flex-direction: column'>
+                    <button>
+                        <a
+                        href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-{version}.AppImage"
+                        target="_blank" rel="noreferrer">
+                            Linux (x64)
+                        </a>
+                    </button>
+                    <button>
+                        <a
+                        href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-{version}-arm64.AppImage"
+                        target="_blank" rel="noreferrer">
+                            Linux (ARM64)
+                        </a>
+                    </button>
+                </div>
+            </div>
         </FadeIn>
     </div>
     <br>
