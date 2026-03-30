@@ -302,7 +302,7 @@
     </div>
     <br>
     <div class="img">
-        <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer">
+        <a href="https://discord.gg/cr5tuW3AUa" target="_blank" rel="noreferrer">
             <img src="src/assets/alembic-beta.png" alt="Beta Alembic" class="icon beta" />
         </a>
     </div>
@@ -325,7 +325,7 @@
                         </a>
                     </div>
                     <div class="column">
-                        <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer">
+                        <a href="https://discord.gg/cr5tuW3AUa" target="_blank" rel="noreferrer">
                             <img src="src/assets/discord.png" alt="Discord icon" class="icon" />
                         </a>
                     </div>
@@ -342,7 +342,7 @@
                         </a>
                     </div>
                     <div class="column">
-                        <a href="https://discord.gg/uDk2XDhh8K" target="_blank" rel="noreferrer" class="highlight">
+                        <a href="https://discord.gg/cr5tuW3AUa" target="_blank" rel="noreferrer" class="highlight">
                             Join Saturn's Sojourn!
                         </a>
                     </div>
