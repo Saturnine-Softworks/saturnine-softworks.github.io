@@ -245,7 +245,7 @@
             <div class='blurb'>
                 <i>Lexicanter</i> is an app for constructing languages.
                 It was developed and will occasionally be updated by Ethan Ray (known online as Saturnine).<br/>
-                It was created in January 2022, and last updated August 2025.
+                It was created in January 2022, and last updated September 2026.
             </div>
         </FadeIn>
     </div>
