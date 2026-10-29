@@ -1,7 +1,7 @@
 <script lang=ts>
     import FadeIn from "./lib/FadeIn.svelte";
     import Carousel from 'svelte-carousel';
-    const version = '2.3.2';
+    const version = '2.3.3';
     const images = ['dark-theme', 'light-theme', 'marine-theme', 'glade-theme', 'pom-theme', 'wist-theme', 'leather-theme'];
 </script>
 <style lang="scss">
@@ -245,7 +245,7 @@
             <div class='blurb'>
                 <i>Lexicanter</i> is an app for constructing languages.
                 It was developed and will occasionally be updated by Ethan Ray (known online as Saturnine).<br/>
-                It was created in January 2022, and last updated September 2026.
+                It was created in January 2022, and last updated October 2026.
             </div>
         </FadeIn>
     </div>
@@ -276,7 +276,7 @@
                 </div>
                 <button>
                     <a
-                    href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter-Setup-{version}.exe"
+                    href="https://github.com/Saturnine-Softworks/Lexicanter/releases/download/{version}/Lexicanter.Setup.{version}.exe"
                     target="_blank" rel="noreferrer">
                         Windows
                     </a>
